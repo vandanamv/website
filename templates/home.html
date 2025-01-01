@@ -21,7 +21,8 @@
     </head>
     <body>
         <div class="container">
-            <h1 class="text-center mt-2 mb-4">Careers</h1>
+            <h1 class="text-center mt-2 mb-4">
+                {{company_name}}Careers</h1>
             <img
                 class="img-fluid"
                 id="banner"
@@ -39,7 +40,11 @@
                 netus hendrerit duis erat et eu.
             </p>
             <h2 class="text-center mt-3 mb-4">Positions</h2>
-            <p>To do</p>
+            <p>
+                {% for job in jobs%}
+                {% include 'jobitem.html' %}
+                {% endfor%}
+            </p>
             <div class="text-center">
                 <button class="btn btn-primary btn-lg">Contact Us</button>
                 <p class="mt-4">copyright @2025</p>
