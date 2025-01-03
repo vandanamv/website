@@ -14,21 +14,24 @@
                 height: 360px;
                 object-fit: cover;
                 width: 100%;
+                margin-bottom:16px;
             }
         </style>
 
         <title>Vandana</title>
     </head>
     <body>
+        {% include 'nav.html'%}
         <div class="container">
             <h1 class="text-center mt-2 mb-4">
                 {{company_name}}Careers</h1>
             <img
                 class="img-fluid"
                 id="banner"
-                src="https://7b0ed345-ec21-4295-ac4f-ed4e11653aee-00-34d6y7amxnits.pike.replit.dev/static/banner.jpeg"
-            />
+                src="https://7b0ed345-ec21-4295-ac4f-ed4e11653aee-00-34d6y7amxnits.pike.replit.dev/static/banner.jpeg"/>
             <h2 class="text-center mt-3 mb-4">About</h2>
+            <div class="row" style="margin-bottom:16px">
+                <div class="col-md-6">
             <p class="lead">
                 Lorem ipsum odor amet, consectetuer adipiscing elit. Facilisis
                 metus consequat urna magna ante posuere dolor sed. Eget lobortis
@@ -39,6 +42,12 @@
                 lacus scelerisque gravida felis venenatis elementum. Porttitor
                 netus hendrerit duis erat et eu.
             </p>
+                </div>
+                <div class="d-none d-md-block col-md-6">
+                <img src="/static/office.jpeg" style="height:320px; border-radius:5px">
+                </div>
+                
+        </div>
             <h2 class="text-center mt-3 mb-4">Job Opening</h2>
             <p>
                 {% for job in jobs%}
@@ -50,5 +59,6 @@
                 <p class="mt-4">copyright @2025</p>
             </div>
         </div>
+        {% include 'footer.html' %}
     </body>
 </html>
